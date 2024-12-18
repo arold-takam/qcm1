@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM_TEST</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <script src="{% static 'js/home.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div id="group">
+            <a href="/">
+                <img src="{% static 'images/qcm_logo.png' %}" alt="Logo du QCM">
+                <h1>QCM_TEST</h1>
+            </a>
+            <div id="score">
+                <span id="un"><h3>Score</h3></span>
+                <span id="deux"><h3><strong>0.0</strong></h3></span>
+            </div>
+            <div id="menu">
+                <button id="mnu">Menu</button>
+            </div>
+        </div>
+    </header>
+    <div id="univer">
+        <div id="setting">
+            <div id="close">
+                <img src="{% static 'images/cancel_presentation_32dp_000000_FILL0_wght400_GRAD0_opsz40.png'  %}" alt="cls" id="cls">
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Your Profile</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="/inscription/">Sign in</a>
+                </li>
+            </ul>
+            <div id="footer">
+                <p>&copy; 2021 QCM_TEST. All rights reserved.</p>
+            </div>
+        </div>
+        <main>
+            <div id="all">
+                <ul>
+                    <li>
+                        <article><h4>Question1</h4></article>
+                        <section>
+                            Utiliser un outil de dessin UML:
+                            Des logiciels comme Lucidchart, Draw.io
+                            ou StarUML te permettent de créer tes propres
+                            diagrammes de classes en utilisant les symboles UML standard.
+                            Tu peux ainsi dessiner toi-même les exemples que j'ai donnés.
+                        </section>
+                        <input type="text" name="answer" id="answer" placeholder="type your answer here.">
+                    </li>
+                    <li>
+                        <article><h4>Question2</h4></article>
+                        <section>
+                            Utiliser un outil de dessin UML:
+                            Des logiciels comme Lucidchart, Draw.io
+                            ou StarUML te permettent de créer tes propres
+                            diagrammes de classes en utilisant les symboles UML standard.
+                            Tu peux ainsi dessiner toi-même les exemples que j'ai donnés.
+                        </section>
+                        <input type="text" name="answer" id="answer" placeholder="type your answer here.">
+                    </li>
+                    <li>
+                        <article><h4>Question3</h4></article>
+                        <section>
+                            Utiliser un outil de dessin UML:
+                            Des logiciels comme Lucidchart, Draw.io
+                            ou StarUML te permettent de créer tes propres
+                            diagrammes de classes en utilisant les symboles UML standard.
+                            Tu peux ainsi dessiner toi-même les exemples que j'ai donnés.
+                        </section>
+                        <input type="text" name="answer" id="answer" placeholder="type your answer here.">
+                    </li>
+                    <li>
+                        <article><h4>Question4</h4></article>
+                        <section>
+                            Utiliser un outil de dessin UML:
+                            Des logiciels comme Lucidchart, Draw.io
+                            ou StarUML te permettent de créer tes propres
+                            diagrammes de classes en utilisant les symboles UML standard.
+                            Tu peux ainsi dessiner toi-même les exemples que j'ai donnés.
+                        </section>
+                        <input type="text" name="answer" id="answer" placeholder="type your answer here.">
+                    </li>
+                </ul>
+                <div id="foot">
+                    <h4>Submit</h4>
+                    <button>
+                        <a href="/correction/">
+                            <img src="{% static 'images/send_32dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png'%}" alt="">
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

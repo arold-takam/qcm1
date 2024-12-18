@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QCM_CORRECTION</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/correction.css' %}">
+    <script src="{% static 'js/correction.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div id="group">
+            <a href="/">
+                <img src="{% static 'images/qcm_logo.png' %}" alt="Logo du QCM">
+                <h1>QCM_TEST</h1>
+            </a>
+            <div id="score">
+                <span id="un"><h3>Score</h3></span>
+                <span id="deux"><h3><strong>15.75</strong></h3></span>
+            </div>
+            <div id="menu">
+                <button id="mnu">Menu</button>
+            </div>
+        </div>
+    </header>
+    <div id="univer">
+        <div id="setting">
+            <div id="close">
+                <img src="{% static 'images/cancel_presentation_32dp_000000_FILL0_wght400_GRAD0_opsz40.png'  %}" alt="cls" id="cls">
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Your Profile</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="/inscription/">Sign in</a>
+                </li>
+            </ul>
+            <div id="footer">
+                <p>&copy; 2021 QCM_TEST. All rights reserved.</p>
+            </div>
+        </div>
+        <main>
+            <div id="all">
+                <ul>
+                    <li>
+                        <article><h4>Question1: <span>Correct !</span></h4></article>
+                        <section>
+                            <img src="{% static 'images/task_alt_32dp_78A75A_FILL0_wght400_GRAD0_opsz40.png' %}">
+                        </section>
+                    </li>
+                    <li>
+                        <article><h4>Question2: <b>Wrong.</b></h4></article>
+                        <section>
+                            <img src="{% static 'images/dangerous_32dp_EA3323_FILL0_wght400_GRAD0_opsz40.png' %}">
+                        </section>
+                        <div id="com">
+                            <h4>The correct answer is:</h4>
+                            <p>
+                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <article><h4>Question3: <span>Correct !</span></h4></article>
+                        <section>
+                            <img src="{% static 'images/task_alt_32dp_78A75A_FILL0_wght400_GRAD0_opsz40.png' %}">
+                        </section>
+                    </li>
+                    <li>
+                        <article><h4>Question4: <b>Wrong.</b></h4></article>
+                        <section>
+                            <img src="{% static 'images/dangerous_32dp_EA3323_FILL0_wght400_GRAD0_opsz40.png' %}">
+                        </section>
+                        <div id="com">
+                            <h4>The correct answer is:</h4>
+                            <p>
+                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div id="foot">
+                    <button>
+                        <a href="/">
+                            <img src="{% static 'images/arrow_back_32dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png'%}" alt="">
+                        </a>
+                    </button>
+                    <h4>Back</h4>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

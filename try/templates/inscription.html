@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM_TEST</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/inscription.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <script src="{% static 'js/inscription.js' %}"></script>
+</head>
+<body>
+    <header>
+        <div id="group">
+            <a href="/">
+                <img src="{% static 'images/qcm_logo.png' %}" alt="Logo du QCM">
+                <h1>QCM_TEST</h1>
+            </a>
+            <div id="score">
+                <span id="un"><h3>Score</h3></span>
+                <span id="deux"><h3><strong>0.0</strong></h3></span>
+            </div>
+            <div id="menu">
+                <button id="mnu">Menu</button>
+            </div>
+        </div>
+    </header>
+    <div id="univer">
+        <div id="setting">
+            <div id="close">
+                <img src="{% static 'images/cancel_presentation_32dp_000000_FILL0_wght400_GRAD0_opsz40.png'  %}" alt="cls" id="cls">
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Your Profile</a>
+                </li>
+                <li>
+                    <a href="#">Settings</a>
+                </li>
+                <li>
+                    <a href="#">About us</a>
+                </li>
+                <li>
+                    <a href="/inscription/">Sign in</a>
+                </li>
+            </ul>
+            <div id="footer">
+                <p>&copy; 2021 QCM_TEST. All rights reserved.</p>
+            </div>
+        </div>
+        <main>
+            <div id="all">
+                <div id="container">
+                    <figure>
+                        <img src="{% static 'images/Utilisateur.png' %}" alt="profile zone">
+                        <input type="file" name="im" id="im" accept="image/*">
+                        <p style="color: white">Put your profile picture here</p>
+                    </figure>
+                    <fieldset id="profile">
+                        <form>
+                            <div id="zone1">
+                                <input type="text" name="first" id="first" placeholder="First Name">
+                                <input type="text" name="sec" id="sec" placeholder="User Name">
+                                <input type="password" name="pass1" id="pass1" placeholder="Password">
+                                <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+                            </div>
+                            <div id="zone2">
+                                <input type="text" name="sec" id="sec" placeholder="Second Name">
+                                <input type="email" name="mail" id="mail" placeholder="Email">
+                                <input type="password" name="pass1" id="pass1" placeholder="Confirm Password">
+                            </div>
+                        </form>
+                        <button>SUBMIT</button>
+                    </fieldset>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
