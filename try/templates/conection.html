@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QCM_TEST/inscription</title>
+    <title>QCM_TEST/conection</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/inscription.css' %}">
+    <link rel="stylesheet" href="{% static 'css/conection.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <script src="{% static 'js/inscription.js' %}"></script>
+    <script src="{% static 'js/conection.js' %}"></script>
 </head>
 <body>
     <header>
@@ -57,33 +57,21 @@
                         <img src="{% static 'images/Utilisateur.png' %}" alt="profile zone">
                     </figure>
                     <fieldset id="profile">
-                        <form method="POST" enctype="multipart/form-data">
+                        <form method="POST">
                             {% csrf_token %}
                             <div id="put">
                                 <div id="zone1">
-                                    <input type="text" name="first_name" id="first" placeholder="First Name" value="{{ form.first_name.value }}" required>
-                                    <input type="text" name="username" id="username" placeholder="User Name" value="{{ form.username.value }}" required>
-                                    <input type="password" name="password1" id="password1" placeholder="Password" required>
-                                </div>
-                                <div id="zone2">
-                                    <input type="text" name="last_name" id="last" placeholder="Last Name" value="{{ form.last_name.value }}" required>
-                                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" value="{{ form.phone.value }}" required>
-                                    <input type="password" name="password2" id="password2" placeholder="Confirm Password" required>
+                                    <input type="text" name="username" id="username" placeholder="User Name"  required>
+                                    <input type="password" name="password" id="password" placeholder="Password" required>
                                 </div>
                             </div>
-                            <input type="file" name="image" id="im" accept="image/*">
                             <p style="color: black; margin-bottom: 0.3rem;">
-                                <h6>(Put your profile picture here)</h6>
+                                Don't have an account?
+                                <h6><a href="{% url 'inscription' %}">Sign up</a></h6>
                             </p>
                             <button type="submit">SUBMIT</button>
                         </form>
                     </fieldset>
-                </div>
-                <div id="conect">
-                    <h4>
-                        Ou vous pouvez vous connecter
-                        <a href="/conection/">ICI</a>
-                    </h4>
                 </div>
             </div>
         </main>

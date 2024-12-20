@@ -201,6 +201,7 @@ main{
     width: 50%;
     border: none;
     border-radius: 1.5rem;
+    margin-bottom: 25vh;
 }
 
 #all #container figure{
@@ -243,16 +244,24 @@ main{
 #all #container fieldset form{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     height: 100%;
+    flex-direction: column;
+}
+
+#all #container fieldset form #put{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
 }
 
 #all #container fieldset form #zone1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*justify-content: center;*/
+    justify-content: center;
     width: 45%;
     height: 100%;
 }
@@ -263,7 +272,7 @@ main{
     background-color: white;
     font-size: large;
     text-align: left;
-    /*object-fit: fill;*/
+    object-fit: fill;
     border: none;
     border-bottom: 2px solid #000000;
     padding: 1rem 1rem;
@@ -272,7 +281,7 @@ main{
 #all #container fieldset form #zone2{
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
+    justify-content: center;
     align-items: center;
     width: 45%;
     height: 100%;
@@ -298,4 +307,5 @@ main{
     font-size: large;
     cursor: pointer;
     border-radius: 0.2rem;
+    margin-top: 0.5rem;
 }

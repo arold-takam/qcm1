@@ -100,7 +100,9 @@ header #group #menu #mnu:hover{
 #univer{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    width: 100vw;
+    height: 100vh;
 }
 
 #univer #setting{
@@ -113,7 +115,6 @@ header #group #menu #mnu:hover{
     background-color: #FF6A00;
     z-index: 99;
     transition: 1s ease-in-out;
-    padding: 0rem 1rem;
 }
 
 #setting #close{
@@ -178,6 +179,12 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
 }
@@ -186,7 +193,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 70%;
     background-color: rgba(255, 255, 255, 0.788);
 }
@@ -195,16 +202,15 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75%;
     list-style: none;
     margin: 1.5rem 3rem;
 }
 
 #all ul li{
-    width: 90%;
+    width: 65%;
     margin: 1.5rem 0;
     padding: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.67);
+    background-color: white;
 }
 
 #all ul li article h4{
@@ -214,51 +220,27 @@ main{
     margin: 0.1rem 0;
 }
 
-#all ul li article h4 span{
-    color: #468d1c;
-}
-
-#all ul li article h4 b{
-    color: red;
-}
-
 #all ul li section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-#all ul li section img{
-    width: 7rem;
-    height: auto;
-}
-
-#all ul li #com{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-#all ul li #com h4{
-    text-align: center;
-    color: #468d1c;
-    font-size: large;
-    margin: 0.1rem;
-}
-
-#all ul li #com p{
     text-align: left;
+    font-size: large;
     object-fit: fill;
+    margin-bottom: 1rem;
+}
+
+#all ul li input{
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    font-size: large;
+    border: 0.2rem solid #FF6A00;
+    border-radius: 0.5rem;
 }
 
 #all #foot{
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
-    width: 80%;
+    width: 60%;
     margin-bottom: 1rem;
 }
 
@@ -271,18 +253,19 @@ main{
     border: none;
     border-radius: 0.3rem;
     background-color: #FF6A00;
-    margin-right: 0.8rem;
+    margin-left: 0.8rem;
+    cursor: pointer;
 }
 
-#all #foot button a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
+/*#all #foot button a{*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
 
-#all #foot button a img{
+#all #foot button img{
     width: 70%;
     height: 70%;
 }

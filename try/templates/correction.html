@@ -16,7 +16,7 @@
             </a>
             <div id="score">
                 <span id="un"><h3>Score</h3></span>
-                <span id="deux"><h3><strong>15.75</strong></h3></span>
+                <span id="deux"><h3><strong>{{ score }}/{{ total_questions }}</strong></h3></span>
             </div>
             <div id="menu">
                 <button id="mnu">Menu</button>
@@ -30,7 +30,7 @@
             </div>
             <ul>
                 <li>
-                    <a href="#">Your Profile</a>
+                    <a href="{% url 'profile' %}">Your Profile<br>({{ user.username }})</a>
                 </li>
                 <li>
                     <a href="#">Settings</a>
@@ -39,7 +39,7 @@
                     <a href="#">About us</a>
                 </li>
                 <li>
-                    <a href="/inscription/">Sign in</a>
+                    <a href="{% url 'logout' %}">Logout</a>
                 </li>
             </ul>
             <div id="footer">
@@ -49,46 +49,32 @@
         <main>
             <div id="all">
                 <ul>
-                    <li>
-                        <article><h4>Question1: <span>Correct !</span></h4></article>
-                        <section>
-                            <img src="{% static 'images/task_alt_32dp_78A75A_FILL0_wght400_GRAD0_opsz40.png' %}">
-                        </section>
-                    </li>
-                    <li>
-                        <article><h4>Question2: <b>Wrong.</b></h4></article>
-                        <section>
-                            <img src="{% static 'images/dangerous_32dp_EA3323_FILL0_wght400_GRAD0_opsz40.png' %}">
-                        </section>
-                        <div id="com">
-                            <h4>The correct answer is:</h4>
-                            <p>
-                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <article><h4>Question3: <span>Correct !</span></h4></article>
-                        <section>
-                            <img src="{% static 'images/task_alt_32dp_78A75A_FILL0_wght400_GRAD0_opsz40.png' %}">
-                        </section>
-                    </li>
-                    <li>
-                        <article><h4>Question4: <b>Wrong.</b></h4></article>
-                        <section>
-                            <img src="{% static 'images/dangerous_32dp_EA3323_FILL0_wght400_GRAD0_opsz40.png' %}">
-                        </section>
-                        <div id="com">
-                            <h4>The correct answer is:</h4>
-                            <p>
-                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            </p>
-                        </div>
-                    </li>
+                    {% for result in results %}
+                        <li>
+                            <article>
+                                <h4>Question {{ forloop.counter }}:
+                                    {% if result.is_correct %}
+                                        <span>Correct !</span>
+                                    {% else %}
+                                        <b>Wrong.</b>
+                                    {% endif %}
+                                </h4>
+                            </article>
+                            <section>
+                                {% if result.is_correct %}
+                                    <img src="{% static 'images/task_alt_32dp_78A75A_FILL0_wght400_GRAD0_opsz40.png' %}" alt="">
+                                {% else %}
+                                    <img src="{% static 'images/dangerous_32dp_EA3323_FILL0_wght400_GRAD0_opsz40.png' %}" alt="">
+                                {% endif %}
+                            </section>
+                            {% if not result.is_correct %}
+                                <div id="com">
+                                    <h4>The correct answer is:</h4>
+                                    <p>{{ result.correct_answer }}</p>
+                                </div>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
                 </ul>
                 <div id="foot">
                     <button>
